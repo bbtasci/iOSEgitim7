@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -24,7 +23,7 @@
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparenticon" translatesAutoresizingMaskIntoConstraints="NO" id="f3Q-wZ-ehz">
                                                 <rect key="frame" x="15" y="15" width="384" height="135"/>
-                                                <color key="backgroundColor" red="0.36772483589999999" green="0.58589226009999995" blue="0.73585915570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="tintColor" red="0.0" green="0.0" blue="0.21224331860000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="135" id="ve3-Cv-iBh"/>
@@ -32,7 +31,7 @@
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY PERSONAL ZONE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDc-L8-4Jb">
                                                 <rect key="frame" x="15" y="155" width="384" height="45"/>
-                                                <color key="backgroundColor" red="0.36772483589999999" green="0.58589226009999995" blue="0.73585915570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="vIP-WM-4lw"/>
                                                 </constraints>
@@ -42,7 +41,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fill the blanks with your own informations, then touch the button to save!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aeS-uL-Reb">
                                                 <rect key="frame" x="15" y="205" width="384" height="45"/>
-                                                <color key="backgroundColor" red="0.36772483589999999" green="0.58589226009999995" blue="0.73585915570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="r3p-dt-urh"/>
                                                 </constraints>
@@ -140,7 +139,7 @@
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJL-O1-hxt">
                                                 <rect key="frame" x="15" y="1160" width="384" height="50"/>
-                                                <color key="backgroundColor" red="0.36772483589999999" green="0.58589226009999995" blue="0.73585915570000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="7wc-uN-gnX"/>
                                                 </constraints>
@@ -150,7 +149,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="saveButtonTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IJM-dn-8L3"/>
-                                                    <segue destination="Jix-94-QtA" kind="show" id="QYR-Hg-qCm"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -245,6 +243,7 @@
                         <outlet property="createUniversityTF" destination="0Bm-sL-3eY" id="5pY-eo-2Zh"/>
                         <outlet property="logoImageView" destination="f3Q-wZ-ehz" id="RD7-y8-RYe"/>
                         <outlet property="saveButton" destination="jJL-O1-hxt" id="Au9-gw-UbN"/>
+                        <segue destination="Jix-94-QtA" kind="show" identifier="saveButton" id="AQi-oE-AEZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -262,34 +261,34 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ym-vT-cB4">
                                 <rect key="frame" x="0.0" y="88" width="414" height="1312"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-lw-9At">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3hq-lw-9At" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1312"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here is the saved profile!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BeA-h7-nO7">
                                                 <rect key="frame" x="15" y="155" width="384" height="45"/>
-                                                <color key="backgroundColor" red="0.54496765140000003" green="0.54928666349999999" blue="0.53674393890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.90521615740000005" green="0.92540532350000004" blue="0.93784707779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="n4P-p8-JvN"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconsave" translatesAutoresizingMaskIntoConstraints="NO" id="Gww-nr-ddV">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-saveicon" translatesAutoresizingMaskIntoConstraints="NO" id="Gww-nr-ddV">
                                                 <rect key="frame" x="15" y="15" width="384" height="135"/>
-                                                <color key="backgroundColor" red="0.54496765140000003" green="0.54928666349999999" blue="0.53674393890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.90521615740000005" green="0.92540532350000004" blue="0.93784707779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="135" id="Hxi-kr-VDv"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Go to previous page to save new profile!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fuT-a2-ua2">
                                                 <rect key="frame" x="15" y="205" width="384" height="45"/>
-                                                <color key="backgroundColor" red="0.54496765140000003" green="0.54928666349999999" blue="0.53674393890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.90521615740000005" green="0.92540532350000004" blue="0.93784707779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="rfN-y8-EQS"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ky9-3E-D9N">
@@ -402,9 +401,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparenticon" translatesAutoresizingMaskIntoConstraints="NO" id="0mr-li-R5b">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue-transparenticon" translatesAutoresizingMaskIntoConstraints="NO" id="0mr-li-R5b">
                                                 <rect key="frame" x="15" y="1160" width="384" height="100"/>
-                                                <color key="backgroundColor" red="0.54496765140000003" green="0.54928666349999999" blue="0.53674393890000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.90521615740000005" green="0.92540532350000004" blue="0.93784707779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="100" id="qhd-gM-caQ"/>
                                                 </constraints>
@@ -460,6 +459,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="3hq-lw-9At" secondAttribute="bottom" id="HS6-dG-NVq"/>
                                     <constraint firstAttribute="trailing" secondItem="3hq-lw-9At" secondAttribute="trailing" id="R0K-Jz-h0j"/>
@@ -471,7 +471,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vuv-kf-hUL"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="3ym-vT-cB4" secondAttribute="bottom" id="5ho-7Y-bes"/>
                             <constraint firstItem="3ym-vT-cB4" firstAttribute="leading" secondItem="vuv-kf-hUL" secondAttribute="leading" id="8Zw-SY-soS"/>
@@ -482,6 +482,23 @@
                     </view>
                     <navigationItem key="navigationItem" id="ZCw-zl-Hwz"/>
                     <size key="freeformSize" width="414" height="1400"/>
+                    <connections>
+                        <outlet property="goToPreviousLabel" destination="fuT-a2-ua2" id="PCw-9I-WRv"/>
+                        <outlet property="saveConfirmedLabel" destination="BeA-h7-nO7" id="vyZ-q8-n8r"/>
+                        <outlet property="saveIconImageView" destination="Gww-nr-ddV" id="syS-Lp-iZo"/>
+                        <outlet property="secondLogoImageView" destination="0mr-li-R5b" id="yqx-RK-9mT"/>
+                        <outlet property="showBirthdayLabel" destination="suf-iw-evD" id="lRL-uI-q2S"/>
+                        <outlet property="showCountryLabel" destination="PVE-NK-Dhe" id="hpW-Wj-QVn"/>
+                        <outlet property="showFavPlayerLabel" destination="8dF-8f-zsf" id="sLf-Da-rat"/>
+                        <outlet property="showFavTeamLabel" destination="t7a-g8-0u5" id="dog-u4-tIm"/>
+                        <outlet property="showHoroscopeLabel" destination="PNH-2k-4Ab" id="eK1-rQ-NYp"/>
+                        <outlet property="showIDLabel" destination="Hct-H6-We2" id="Q0G-NH-ip4"/>
+                        <outlet property="showNameLabel" destination="ky9-3E-D9N" id="us4-tr-TwX"/>
+                        <outlet property="showPhoneLabel" destination="fiC-8p-MmC" id="jOf-5M-rDb"/>
+                        <outlet property="showStateLabel" destination="fkj-KM-rRV" id="h8t-5J-asy"/>
+                        <outlet property="showSurnameLabel" destination="YGw-kC-07u" id="C2p-lO-rAv"/>
+                        <outlet property="showUniversityLabel" destination="yDv-Kj-qlR" id="xCD-iT-mCj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RyE-fF-aNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -507,10 +524,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="iconsave" width="281" height="280"/>
+        <image name="blue-saveicon" width="281" height="280"/>
+        <image name="blue-transparenticon" width="281" height="280"/>
         <image name="transparenticon" width="281" height="280"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

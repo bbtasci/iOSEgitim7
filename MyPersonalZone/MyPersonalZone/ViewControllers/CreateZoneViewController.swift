@@ -9,6 +9,7 @@ import UIKit
 
 class CreateZoneViewController: UIViewController {
 
+    // MARK: - OUTLETS
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var appNameLabel: UILabel!
     @IBOutlet weak var appInfoLabel: UILabel!
@@ -27,9 +28,38 @@ class CreateZoneViewController: UIViewController {
     
     @IBOutlet weak var saveButton: UIButton!
     
+    // MARK: - LIFECYCLE METHODS
     override func viewDidLoad() {
         super.viewDidLoad()
         prepareUICZ()
+    }
+    
+    func singletonTransport() {
+        Singleton.shared.name = (createNameTF.text) ?? ""
+        Singleton.shared.surname = (createSurnameTF.text) ?? ""
+        Singleton.shared.id = (createIdentificationTF.text) ?? ""
+        Singleton.shared.birthday = (createBirthdayTF.text) ?? ""
+        Singleton.shared.country = (createCountryTF.text) ?? ""
+        Singleton.shared.state = (createStateTF.text) ?? ""
+        Singleton.shared.phone = (createPhoneTF.text) ?? ""
+        Singleton.shared.university = (createUniversityTF.text) ?? ""
+        Singleton.shared.horoscope = (createHoroscopeTF.text) ?? ""
+        Singleton.shared.favTeam = (createFavTeamTF.text) ?? ""
+        Singleton.shared.favPlayer = (createFavPlayerTF.text) ?? ""
+    }
+    
+    func emptyCheck() {
+        if createNameTF.text == "NAME" || createSurnameTF.text == "" || createIdentificationTF.text == "" {
+            alertThereIsEmpty()
+        } else {
+            singletonTransport()
+        }
+    }
+    
+    func alertThereIsEmpty() {
+            let alertNoEmpty = UIAlertController(title: "Warning!", message: "NAME, SURNAME and ID can not be empty!", preferredStyle: .alert)
+            alertNoEmpty.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertNoEmpty, animated: true)
     }
     
     func prepareUICZ() {
@@ -49,7 +79,6 @@ class CreateZoneViewController: UIViewController {
         prepareCreateFavPlayerTF()
         prepareSaveButton()
     }
-
     func prepareLogo() {
         logoImageView.layer.cornerRadius = 5
         logoImageView.layer.masksToBounds = true
@@ -111,21 +140,11 @@ class CreateZoneViewController: UIViewController {
         saveButton.layer.masksToBounds = true
     }
     
-    
+    // MARK: - ACTIONS
     @IBAction func saveButtonTouched(_ sender: Any) {
-        Singleton.shared.name = (createNameTF.text) ?? ""
-        Singleton.shared.surname = (createSurnameTF.text) ?? ""
-        Singleton.shared.id = (createIdentificationTF.text) ?? ""
-        Singleton.shared.birthday = (createBirthdayTF.text) ?? ""
-        Singleton.shared.country = (createCountryTF.text) ?? ""
-        Singleton.shared.state = (createStateTF.text) ?? ""
-        Singleton.shared.phone = (createPhoneTF.text) ?? ""
-        Singleton.shared.university = (createUniversityTF.text) ?? ""
-        Singleton.shared.horoscope = (createHoroscopeTF.text) ?? ""
-        Singleton.shared.favTeam = (createFavTeamTF.text) ?? ""
-        Singleton.shared.favPlayer = (createFavPlayerTF.text) ?? ""
+        emptyCheck()
+        performSegue(withIdentifier: "saveButton", sender: nil)
     }
-    
     
 }
 

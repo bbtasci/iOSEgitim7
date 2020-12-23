@@ -45,8 +45,6 @@ class ShowZoneViewController: UIViewController {
         showHoroscopeLabel.text = Singleton.shared.horoscope
         showFavTeamLabel.text = Singleton.shared.favTeam
         showFavPlayerLabel.text = Singleton.shared.favPlayer
-        
-        
     }
     
     func prepareUISZ() {

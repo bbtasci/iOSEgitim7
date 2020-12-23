@@ -15,30 +15,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="l6a-ea-3Eg">
-                                <rect key="frame" x="132" y="338" width="150" height="220.5"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graytransparenticon" translatesAutoresizingMaskIntoConstraints="NO" id="twa-0s-BYk">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="200"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="1r1-95-A2A"/>
-                                            <constraint firstAttribute="width" constant="150" id="gLi-u3-azI"/>
-                                        </constraints>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Personal Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a7-xN-Mrq">
-                                        <rect key="frame" x="6.5" y="200" width="137" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.90521615740000005" green="0.92540532350000004" blue="0.93784707779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="graytransparenticon" translatesAutoresizingMaskIntoConstraints="NO" id="twa-0s-BYk">
+                                <rect key="frame" x="122" y="363" width="170" height="170"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="8vz-0v-Lso"/>
+                                    <constraint firstAttribute="height" constant="170" id="Piq-Uw-yRP"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Personal Zone" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a7-xN-Mrq">
+                                <rect key="frame" x="138.5" y="583" width="137" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.90521615740000005" green="0.92540532350000004" blue="0.93784707779999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.14533549549999999" green="0.29421061279999999" blue="0.47272324560000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="l6a-ea-3Eg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="0iX-bq-EsJ"/>
-                            <constraint firstItem="l6a-ea-3Eg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9kp-JM-6zt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="8a7-xN-Mrq" secondAttribute="trailing" constant="15" id="0ZU-WT-nqg"/>
+                            <constraint firstItem="8a7-xN-Mrq" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4BG-gE-cgt"/>
+                            <constraint firstItem="8a7-xN-Mrq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="CiC-sJ-3bf"/>
+                            <constraint firstItem="twa-0s-BYk" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="ktn-E0-ntS"/>
+                            <constraint firstItem="8a7-xN-Mrq" firstAttribute="top" secondItem="twa-0s-BYk" secondAttribute="bottom" constant="50" id="qF7-qR-Iiv"/>
+                            <constraint firstItem="twa-0s-BYk" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="vfQ-LP-Aed"/>
                         </constraints>
                     </view>
                 </viewController>

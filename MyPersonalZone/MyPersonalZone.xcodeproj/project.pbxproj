@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A4CE42C25934E0A00EE2C10 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4CE42B25934E0A00EE2C10 /* Singleton.swift */; };
 		4AA2B4C425932CDD0093D78B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2B4C325932CDD0093D78B /* AppDelegate.swift */; };
 		4AA2B4C625932CDD0093D78B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2B4C525932CDD0093D78B /* SceneDelegate.swift */; };
 		4AA2B4C825932CDD0093D78B /* CreateZoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA2B4C725932CDD0093D78B /* CreateZoneViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4A4CE42B25934E0A00EE2C10 /* Singleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		4AA2B4C025932CDD0093D78B /* MyPersonalZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPersonalZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA2B4C325932CDD0093D78B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4AA2B4C525932CDD0093D78B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 				4AA2B4CC25932CDE0093D78B /* Assets.xcassets */,
 				4AA2B4CE25932CDE0093D78B /* LaunchScreen.storyboard */,
 				4AA2B4D125932CDE0093D78B /* Info.plist */,
+				4A4CE42B25934E0A00EE2C10 /* Singleton.swift */,
 			);
 			path = MyPersonalZone;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 				4AA2B4C825932CDD0093D78B /* CreateZoneViewController.swift in Sources */,
 				4AA2B4C425932CDD0093D78B /* AppDelegate.swift in Sources */,
 				4AA2B4C625932CDD0093D78B /* SceneDelegate.swift in Sources */,
+				4A4CE42C25934E0A00EE2C10 /* Singleton.swift in Sources */,
 				4AA2B4DB25932D0D0093D78B /* ShowZoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

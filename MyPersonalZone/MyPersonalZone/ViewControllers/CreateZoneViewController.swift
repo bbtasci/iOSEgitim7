@@ -8,7 +8,7 @@
 import UIKit
 
 class CreateZoneViewController: UIViewController {
-
+    
     // MARK: - OUTLETS
     @IBOutlet weak var logoImageView: UIImageView!
     @IBOutlet weak var appNameLabel: UILabel!
@@ -48,103 +48,56 @@ class CreateZoneViewController: UIViewController {
         Singleton.shared.favPlayer = (createFavPlayerTF.text) ?? ""
     }
     
-    func emptyCheck() {
-        if createNameTF.text == "NAME" || createSurnameTF.text == "" || createIdentificationTF.text == "" {
-            alertThereIsEmpty()
+    func isTextfieldsEmpty() -> Bool {
+        if createNameTF.text == "" || createSurnameTF.text == "" || createIdentificationTF.text == "" {
+            return true
         } else {
-            singletonTransport()
+            return false
         }
     }
     
-    func alertThereIsEmpty() {
-            let alertNoEmpty = UIAlertController(title: "Warning!", message: "NAME, SURNAME and ID can not be empty!", preferredStyle: .alert)
-            alertNoEmpty.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alertNoEmpty, animated: true)
+    func showAlert(message: String) {
+        let alertNoEmpty = UIAlertController(title: "Warning!", message: message, preferredStyle: .alert)
+        alertNoEmpty.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(alertNoEmpty, animated: true)
     }
     
+    // MARK: - PREPARE UI
     func prepareUICZ() {
-        prepareLogo()
-        prepareAppName()
-        prepareAppInfoLabel()
-        prepareCreateNameTF()
-        prepareCreateSurnameTF()
-        prepareCreateIdentificationTF()
-        prepareCreateBirthdayTF()
-        prepareCreateCountryTF()
-        prepareCreateStateTF()
-        prepareCreatePhoneTF()
-        prepareCreateUniversityTF()
-        prepareCreateHoroscopeTF()
-        prepareCreateFavTeamTF()
-        prepareCreateFavPlayerTF()
-        prepareSaveButton()
+        prepareLayer(object: logoImageView as Any)
+        prepareLayer(object: appNameLabel as Any)
+        prepareLayer(object: appInfoLabel as Any)
+        prepareLayer(object: createNameTF as Any)
+        prepareLayer(object: createSurnameTF as Any)
+        prepareLayer(object: createIdentificationTF as Any)
+        prepareLayer(object: createBirthdayTF as Any)
+        prepareLayer(object: createCountryTF as Any)
+        prepareLayer(object: createSurnameTF as Any)
+        prepareLayer(object: createPhoneTF as Any)
+        prepareLayer(object: createUniversityTF as Any)
+        prepareLayer(object: createHoroscopeTF as Any)
+        prepareLayer(object: createFavTeamTF as Any)
+        prepareLayer(object: createFavPlayerTF as Any)
     }
-    func prepareLogo() {
-        logoImageView.layer.cornerRadius = 5
-        logoImageView.layer.masksToBounds = true
-    }
-    func prepareAppName() {
-        appNameLabel.layer.cornerRadius = 5
-        appNameLabel.layer.masksToBounds = true
-    }
-    func prepareAppInfoLabel() {
-        appInfoLabel.layer.cornerRadius = 5
-        appInfoLabel.layer.masksToBounds = true
-    }
-    func prepareCreateNameTF() {
-        createNameTF.layer.cornerRadius = 5
-        createNameTF.layer.masksToBounds = true
-    }
-    func prepareCreateSurnameTF() {
-        createSurnameTF.layer.cornerRadius = 5
-        createSurnameTF.layer.masksToBounds = true
-    }
-    func prepareCreateIdentificationTF() {
-        createIdentificationTF.layer.cornerRadius = 5
-        createIdentificationTF.layer.masksToBounds = true
-    }
-    func prepareCreateBirthdayTF() {
-        createBirthdayTF.layer.cornerRadius = 5
-        createBirthdayTF.layer.masksToBounds = true
-    }
-    func prepareCreateCountryTF() {
-        createCountryTF.layer.cornerRadius = 5
-        createCountryTF.layer.masksToBounds = true
-    }
-    func prepareCreateStateTF() {
-        createStateTF.layer.cornerRadius = 5
-        createStateTF.layer.masksToBounds = true
-    }
-    func prepareCreatePhoneTF() {
-        createPhoneTF.layer.cornerRadius = 5
-        createPhoneTF.layer.masksToBounds = true
-    }
-    func prepareCreateUniversityTF() {
-        createUniversityTF.layer.cornerRadius = 5
-        createUniversityTF.layer.masksToBounds = true
-    }
-    func prepareCreateHoroscopeTF() {
-        createHoroscopeTF.layer.cornerRadius = 5
-        createHoroscopeTF.layer.masksToBounds = true
-    }
-    func prepareCreateFavTeamTF() {
-        createFavTeamTF.layer.cornerRadius = 5
-        createFavTeamTF.layer.masksToBounds = true
-    }
-    func prepareCreateFavPlayerTF() {
-        createFavPlayerTF.layer.cornerRadius = 5
-        createFavPlayerTF.layer.masksToBounds = true
-    }
-    func prepareSaveButton() {
-        saveButton.layer.cornerRadius = 5
-        saveButton.layer.masksToBounds = true
+    
+    func prepareLayer(object: Any) {
+        if let object = object as? UIControl {
+            object.layer.cornerRadius = 5
+            object.layer.masksToBounds = true
+        } else if let object = object as? UIView {
+            object.layer.cornerRadius = 5
+            object.layer.masksToBounds = true
+        }
     }
     
     // MARK: - ACTIONS
     @IBAction func saveButtonTouched(_ sender: Any) {
-        emptyCheck()
-        performSegue(withIdentifier: "saveButton", sender: nil)
+        if isTextfieldsEmpty() {
+            showAlert(message: "NAME, SURNAME and ID can not be empty!")
+        } else {
+            singletonTransport()
+            performSegue(withIdentifier: "saveButton", sender: nil)
+        }
     }
     
 }
-

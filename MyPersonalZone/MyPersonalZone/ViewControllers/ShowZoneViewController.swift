@@ -47,59 +47,32 @@ class ShowZoneViewController: UIViewController {
         showFavPlayerLabel.text = Singleton.shared.favPlayer
     }
     
+    
     func prepareUISZ() {
-        prepareShowNameLabel()
-        prepareShowSurnameLabel()
-        prepareShowBirthdayLabel()
-        prepareShowCountryLabel()
-        prepareShowStateLabel()
-        prepareShowPhoneLabel()
-        prepareShowUniversityLabel()
-        prepareShowHoroscopeLabel()
-        prepareShowFavTeamLabel()
-        prepareShowFavPlayerLabel()
+        prepareLayer(object: saveIconImageView as Any)
+        prepareLayer(object: saveConfirmedLabel as Any)
+        prepareLayer(object: goToPreviousLabel as Any)
+        prepareLayer(object: showNameLabel as Any)
+        prepareLayer(object: showSurnameLabel as Any)
+        prepareLayer(object: showIDLabel as Any)
+        prepareLayer(object: showBirthdayLabel as Any)
+        prepareLayer(object: showCountryLabel as Any)
+        prepareLayer(object: showStateLabel as Any)
+        prepareLayer(object: showPhoneLabel as Any)
+        prepareLayer(object: showUniversityLabel as Any)
+        prepareLayer(object: showHoroscopeLabel as Any)
+        prepareLayer(object: showFavTeamLabel as Any)
+        prepareLayer(object: showFavPlayerLabel as Any)
     }
     
-    func prepareShowNameLabel() {
-        showNameLabel.layer.cornerRadius = 5
-        showNameLabel.layer.masksToBounds = true
+    func prepareLayer(object: Any) {
+        if let object = object as? UIControl {
+            object.layer.cornerRadius = 5
+            object.layer.masksToBounds = true
+        } else if let object = object as? UIView {
+            object.layer.cornerRadius = 5
+            object.layer.masksToBounds = true
+        }
     }
-    func prepareShowSurnameLabel() {
-        showSurnameLabel.layer.cornerRadius = 5
-        showSurnameLabel.layer.masksToBounds = true
-    }
-    func prepareShowBirthdayLabel() {
-        showBirthdayLabel.layer.cornerRadius = 5
-        showBirthdayLabel.layer.masksToBounds = true
-    }
-    func prepareShowCountryLabel() {
-        showCountryLabel.layer.cornerRadius = 5
-        showCountryLabel.layer.masksToBounds = true
-    }
-    func prepareShowStateLabel() {
-        showStateLabel.layer.cornerRadius = 5
-        showStateLabel.layer.masksToBounds = true
-    }
-    func prepareShowPhoneLabel() {
-        showPhoneLabel.layer.cornerRadius = 5
-        showPhoneLabel.layer.masksToBounds = true
-    }
-    func prepareShowUniversityLabel() {
-        showUniversityLabel.layer.cornerRadius = 5
-        showUniversityLabel.layer.masksToBounds = true
-    }
-    func prepareShowHoroscopeLabel() {
-        showHoroscopeLabel.layer.cornerRadius = 5
-        showHoroscopeLabel.layer.masksToBounds = true
-    }
-    func prepareShowFavTeamLabel() {
-        showFavTeamLabel.layer.cornerRadius = 5
-        showFavTeamLabel.layer.masksToBounds = true
-    }
-    func prepareShowFavPlayerLabel() {
-        showFavPlayerLabel.layer.cornerRadius = 5
-        showFavPlayerLabel.layer.masksToBounds = true
-    }
-    
     
 }
